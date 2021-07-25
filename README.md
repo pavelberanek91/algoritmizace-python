@@ -43,6 +43,7 @@ Druhý semestr se zaměřuje na objektově orientované programování pro imple
 ### Rozšiřující lekce
 Tato tabulka obsahuje odkazy na další možné využití pythonu v různých oblastech informatiky. Jedná se o úvodní lekce do oblasti, tudíž očekává se další samostudium. Poznatky můžete využít do předmětů na katedře informatiky. Při hromadném zájmu o oblast je možné vypsat volitelný předmět.
 |lekce|obsah|video|
+|---|---|---|
 |27|Datová analýza - numpy, pandas, dtale, seaborn|xxx|
 |28|Statistika|xxx|
 |29|Kvantitativní ekonomie|xxx|
