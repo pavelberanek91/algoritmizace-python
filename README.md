@@ -1,10 +1,10 @@
-# algoritmizace-python
+# Algoritmizace v jazyce python
 
 Repositář pro předměty, představující úvod do programování v jazyce Python. Repositář obsahuje lekce na všechny semestry.
 
-##Sylabus předmětu
+## Sylabus předmětu
 
-###První semestr
+### První semestr
 |lekce|datum|obsah|video|
 |---|---|---|---|
 |01|xx.xx.xx|Základní terminologie objektově orientovaného programování, objekty (hodnoty) základních tříd (čísla, logické hodnoty) a operace resp. metody nad nimi|xxx|
