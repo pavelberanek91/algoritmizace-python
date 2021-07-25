@@ -44,27 +44,33 @@ Druhý semestr se zaměřuje na objektově orientované programování pro imple
 Tato tabulka obsahuje odkazy na další možné využití pythonu v různých oblastech informatiky. Jedná se o úvodní lekce do oblasti, tudíž očekává se další samostudium. Poznatky můžete využít do předmětů na katedře informatiky. Při hromadném zájmu o oblast je možné vypsat volitelný předmět.
 |lekce|obsah|video|
 |---|---|---|
-|27|Datová analýza - numpy, pandas, dtale, seaborn|xxx|
-|28|Statistika|xxx|
-|29|Kvantitativní ekonomie|xxx|
-|30|Teorie her|xxx|
-|31|Dolování dat z internetu - beautiful soup|xxx|
-|32|Optimalizace|xxx|
-|33|Genetické algoritmy|xxx|
-|34|Neuronové sítě - tensorflow|xxx|
-|35|Zpracování obrazu - opencv|xxx|
-|36|Zpracování přirozeného jazyka|xxx|
-|37|Překladače|xxx|
-|38|Konečné automaty|xxx|
-|39|Síťová komunikace|xxx|
-|40|Automatizace - os, shutil, cronjobs|xxx|
-|41|Testování - pytest, robot|xxx|
+|27|Datová analýza - numpy, pandas, scipy, dtale, seaborn|xxx|
+|28|Matematika a statistika - statistics, statsmodels, sympy, pyod|xxx|
+|29|Kvantitativní ekonomie - Quandl, QuantEcon, QuantLib, Zipline, Pyfolio|xxx|
+|30|Sociologické modelování- nashpy, axelrod, pydot, Mesa|xxx|
+|31|Dolování dat z internetu - request, beautiful soup, lxml, selenium, scrapy|xxx|
+|32|Optimalizace - pyomo, Or-tools, scipy|xxx|
+|33|Evoluční modelování - DEAP, PyGAD, PySwarm|xxx|
+|34|Neuronové sítě - pybrain, scikit-learn, tensorflow, pytorch, openAI, ramp, MILK|xxx|
+|35|Zpracování obrazu - pillow, opencv, mahotas|xxx|
+|36|Zpracování přirozeného jazyka - nltk, gensim, polyglot|xxx|
+|37|Překladače - LLVMlite|xxx|
+|38|Konečné automaty - automata-lib|xxx|
+|39|Síťová komunikace - socket|xxx|
+|40|Automatizace - os, shutil, paramiko, cronjobs, PyAutoGUI|xxx|
+|41|Testování - pytest, robot, behave|xxx|
 |42|Webové aplikace - Flask|xxx|
 |43|Objektově relační mapování - SQLAlchemy|xxx|
-|44|Pokročilé webové aplikace - Django, plotly|xxx|
-|45|Internet věcí|xxx|
-|46|Robotika|xxx|
-|47|Videohry - pygame|xxx|
-|48|Počítačové simulace - paralelismus, Numba|xxx|
-|49|Částicové modelování|xxx|
-|50|Kvantová informatika|xxx|
+|44|Pokročilé webové aplikace - Django, Dash|xxx|
+|45|Internet věcí - tkinter, requests, pyserial, pyduino, firmata|xxx|
+|46|Robotika - robot framework, pyro, dart, pyrobot, pydy, |xxx|
+|47|Videohry a storytelling - pygame, renpy|xxx|
+|48|Počítačové simulace - paralelismus, simpy, Numba|xxx|
+|49|Částicové modelování - MDAnalysis, pysimm, hoomdblue|xxx|
+|50|Kvantová informatika - qiskit, qutip, cirq|xxx|
+|51|Blockchain - blockchain, coinsta, hashlib|xxx|
+|52|Bioinformatika - biopython|xxx|
+|53|Geoinformatika - shapely, geopandas, geopython, folium|xxx|
+|54|Ekoinformatika - ecopy|xxx|
+|55|Medicínská informatika - pyhealth, pymedtermino|xxx|
+|56|Astrofyzika - astropy, astrophysics|xxx|
