@@ -73,37 +73,84 @@ nevylučují, může nastat jeden z nich nebo oba zároveň. Pro výpočet toho,
 
 ### 2.2 Statistika
 
-#### Statistický soubor
+#### Statistický soubor a jeho charakteristiky
 
-TODO
+Statistický soubor je množina objektů, na kterých zkoumáme určitý znak, vyjádření číslem. S hodnoty těchto znaků následně počítáme. Např.: soubor mohou být vybraní
+lidé z města Ústí nad Labem, kteří se zúčastní výzkumu v behaviorální laboratoři FSE UJEP. Znak, který zkoumáme, je reakční doba vyjádřená v milisekundách. Nad
+hodnoty znaků ze souboru následně provádíme měření určitých charakteristik, která nám o souboru vypovídají nějakou informaci.
 
-Př.: statistický soubor obsahuje následující čísla [7, 3, 1, 4, 5]
+Mezi nejzákladnější charakteristiky, které se používají v mnohých vědách, patří:
+1. Střední hodnota
+2. Medián
+3. Minimum
+4. Maximum
+5. Rozptyl (anglicky variance)
+6. Směrodatná odchylka (anglicky standard deviation)
 
-#### Základní statistické ukazatele
+#### Střední hodnota
+Střední hodnota je suma všech čísel podělená počtem čísel.
+```
+soubor = [7, 3, 1, 4, 5]
+stredni_hodnota = sum(soubor)/len(soubor)
+```
+#### Medián
+Medián je hodnota uprostřed seřazeného souboru čísel. V případě sudého počtu znaků v souboru je nutné vzít průměr z dvou prostředních prvků.
+```
+soubor = [7, 3, 1, 4, 5]
+soubor.sort()
+n = len(soubor)
 
-střední hodnota - suma všech čísel / počet čísel = (7 + 3 + 1 + 4 + 5) / 5 = 4
+if n%2 == 0:
+    median = (soubor[int(n/2)-1] + soubor[int(n/2)])/2
+else:
+    median = soubor[int(n/2)]
+```
 
-medián - hodnota uprostřed seřazeného souboru čísel = medián [1, 3, 4, 5, 7] = 4
-
-minimum - nejmenší hodnota ve statistickém souboru = 1
-
-maximum - největší hodnota ve statistickém souboru = 7
+#### Minimum
+Minimum představuje nejmenší hodnotu ve statistickém souboru.
+```
+soubor = [7, 3, 1, 4, 5]
+minimum = min(soubor)
+```
+#### Maximum
+Maximum představuje největší hodnotu ve statistickém souboru
+```
+soubor = [7, 3, 1, 4, 5]
+maximum = max(soubor)
+```
 
 #### Rozptyl
-
-rozptyl (variance)- jak daleko jsou čísla od sebe? - suma (rozdílu hodnot od střední hodnoty)^2 
-= (7-4)^2 + (3-4)^2 + (1-4)^2 + (4-4)^2 + (5-4)^2 = 9 + 1 + 9 + 1 = 20
+Rozptyl představuje míru toho, jak daleko jsou čísla od sebe ve statistickém souboru a je počítán jako suma kvadratů rozdílů hodnot od střední hodnoty 
+```
+soubor = [7, 3, 1, 4, 5]
+mu = sum(soubor)/len(soubor) #střední hodnota, typicky se značí řeckým písmenkem mu [mí]
+rozptyl = 0
+for x in soubor:
+    rozptyl += (x-mu)**2
+```
 
 #### Směrodatná odchylka
-
-směrodatná odchylka (standard deviation) - jak moc se průměrně odchylují hodnota od střední hodnoty, počítá se jako odmocnina z rozptylu = sqrt(20)
+Směrodatná odchylka představuje míru toho, jak moc se průměrně odchylují hodnota od střední hodnoty. Počítá se jako odmocnina z rozptylu.
+```
+import math
+soubor = [7, 3, 1, 4, 5]
+mu = sum(soubor)/len(soubor)
+rozptyl = 0
+for x in soubor:
+    rozptyl += (x-mu)**2
+smerodatna_odchylka = math.sqrt(rozptyl)
+```
 
 ### 2.3 Komplexní čísla
 
 #### Imaginární jednotka
 
 Čísla s přidanou imaginární jednotkou (nadstavba nad reálnými čísly) ve tvaru (a + bi). Pro imaginární jednotku platí vzorce: 
-i^0 = 1, i^1 = i, i^2 = -1, i^3 = -i, i^4 = i^0.
+* i^0 = 1
+* i^1 = i
+* i^2 = -1
+* i^3 = -i
+* i^4 = i^0.
 
 Lze díky nim provádět odmocninu ze záporných čísel (pokud jsou čísly komplexními), např.: sqrt(-4) = sqrt(i^2 * 4) = 2i, kde jsme odmocňovali číslo (0 + 4i^2). 
 
@@ -150,40 +197,45 @@ př.: (1 + 2i) * (2 + 3i) = (2 + 3i + 4i + 6i^2) = (2 + 7i -6) = (-4 + 7i)
 
 #### Velikost komplexniho čísla (squared magnitude)
 
+```
 |a + bi|^2 = a^2 + b^2
+```
 
 platí vzorec, že komplexní číslo * komplexní doplněk k číslu = velikost komplexního čísla
 
+```
 (a + bi) * (a - bi) = a^2 - a*bi + a*bi - (bi)^2 = a^2 - (b^2)*(i^2)  = a^2 + b^2
+```
 
 #### Dělení komplexního čísla komplexním číslem
 
 Využívá se 3 aritmetických vlastnosti komplexních čísel:
 
-1) dělení komplexního čísla reálným číslem je jednoduchá operace se vzorcem: (a + bi)/c = (a/c + (b/c)i)
-2) velikost komplexního čísla je reálné číslo
-3) velikost lze spočítat pomocí vynásobení komplexního čísla komplexním doplňkem.
+1. dělení komplexního čísla reálným číslem je jednoduchá operace se vzorcem: (a + bi)/c = (a/c + (b/c)i)
+2. velikost komplexního čísla je reálné číslo
+3. velikost lze spočítat pomocí vynásobení komplexního čísla komplexním doplňkem.
 
+```
 (a + bi)/(c + di) = (a + bi)/(c + di) * (c - di)/(c - di) = (a + bi)*(c - di)/(c^2 + d^2) = (ac - a*di + c*bi + b*d)/(c^2 a d^2)
-
 př.: (1 + 2i) / (2 + 3i) = (1 + 2i)/(2 + 3i) * (2 - 3i)/(2 - 3i) = (1*2 - 3i + 4i -6i^2)/(4 + 9) = (8 + i)/13 = (8/13 + i/13)
-
+```
 
 ### 2.4 Matice
 
 #### Maticová aritmetika
 
 sčítání matic (u odečítání bude místo + znaménko -), čísla mohou být komplexní a platí pro ně aritmetika z předchozí části lekce.
-
+```
 |a b c|   |j k l|   |a+j b+k c+l|
 |d e f| + |m n o| = |d+m e+n f+o|
 |g h i|   |p q r|   |g+p h+q i+r|
 
      |(1+2i)   (3)|   |(3+2i) (4+4i)|   |(4 + 4i) (8 + 4i)|
 př.: |(4)   (2+3i)| + |(-2)   (5)   | = |(2)      (7 + 3i)| 
+```
 
 škálování matice, j může být reálné nebo komplexní číslo
-
+```
     |a b c|   |j*a j*b j*c|
 j * |d e f| = |j*d j*e j*f|
     |g h i|   |j*g j*h j*i|
@@ -191,23 +243,26 @@ j * |d e f| = |j*d j*e j*f|
                 |1 2|   |(1+2i)  (2+4i) |
 př.: (1 + 2i) * |3 4| = |(3+6i)  (4+8i) |
                 |5 6|   |(5+10i) (6+12i)|
+```
 
 násobení matic, čísla opět mohou být komplexní a platí pro ně aritmetika násobení komplexních čísel
-
+```
 |a b c|   |j k l|   | (a*j + b*m + c*p) (a*k + b*n + c*q) (a*l + b*o + c*r)|
 |d e f| * |m n o| = | (d*j + e*m + f*p) (d*k + e*n + f*q) (d*l + e*o + f*r)|
 |g h i|   |p q r|   | (g*j + h*m + i*p) (g*k + h*n + i*q) (g*l + h*o + i*r)|
-
+```
 výsledná matice bude mít tolik řádků, kolik první matice, a tolik sloupců, kolik druhá matice. Z toho vyplývá, že násobení matic neni komutativní A*B != B*A.
 
 ####Tenzorový součin
 
+```
             |a*c|
             |a*d|
 |a|   |c|   |a*e|
 |b| x |d| = |b*c|
       |e|   |b*d|
             |b*e|
+```
 
 ### 2.5 Maticové operace
 
