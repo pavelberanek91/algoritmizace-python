@@ -12,12 +12,12 @@ Bit je základní reprezentant informace, nabývající diskrétních hodnot {0,
 detekují elektrický proud nebo jeho absenci. Když napíšeme nějaký program (např.: print("hello world")), pak je převeden na sekvenci bitů.
 
 Př.: Obrázek ve stupních šedi je matice celých čísel v rozsahu <0, 255>. Hodnota pixelu na konkrétní souřadnici (x,y) je 26. Pak tato hodnota je reprezentována
-binární informací 11010, protože 0*2^0 (=0) + 1*2^1 (=2) + 0*2^2 (=0) + 1*2^3 (=8) + 1*2^4 (=16), což je po sečtení 2 + 8 + 16 = 26. Obdobným způsobem můžeme
+binární informací 11010, protože `0*2^0 (=0) + 1*2^1 (=2) + 0*2^2 (=0) + 1*2^3 (=8) + 1*2^4 (=16)`, což je po sečtení `2 + 8 + 16 = 26`. Obdobným způsobem můžeme
 reprezentovat barevný obrázek, hlas, video, zprávy na sociálních sítích, programový kód videoher, atd.
 
 Pro zkrácený zápis se informace reprezentují v hexadecimální soustavě (šestnáctková). Naše hodnota pixelu 26 v decimální (desítkové) soustavě by byla rovna hodnotě
-1A, jelikož A*16^0 (=10) + 1*16^1 (=16) = 10 + 16 = 26, kde A představuje decimálně hodnotu 10. Hexadecimální soustava má tedy více symbolů než naše běžně používaná
-desítková (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A=10, B=11, C=12, D=13, E=14, F=15).
+1A, jelikož `A*16^0 (=10) + 1*16^1 (=16) = 10 + 16 = 26`, kde A představuje decimálně hodnotu 10. Hexadecimální soustava má tedy více symbolů než naše běžně používaná
+desítková `(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A=10, B=11, C=12, D=13, E=14, F=15)`.
 
 Písmena se dají vyjádřit také sekvencí binárních (nebo hexadecimálních) symbolů. Toto není jednoznačně dáno. Každý stát, organizace, parta přátel, se může svobodně
 rozhodnout, jakou sekvencí nul a jedniček bude reprezentovat jaké písmeno. Proto existují určité standardy (kódování), např.: ASCII, UTF-8, atd.). Například písmenko
@@ -193,7 +193,7 @@ př.: (1 + 2i) * (2 + 3i) = (2 + 3i + 4i + 6i^2) = (2 + 7i -6) = (-4 + 7i)
 ```
 #### Komplexní doplněk (complex conjugate)
 
-(a + bi) -> doplněk = (a - bi), mění se znaménko komplexní části
+`(a + bi) -> doplněk = (a - bi)`, mění se znaménko komplexní části
 
 #### Velikost komplexniho čísla (squared magnitude)
 
