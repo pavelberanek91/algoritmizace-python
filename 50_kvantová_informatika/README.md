@@ -1,6 +1,10 @@
 # Kvantové počítání v jazyce Python
 Tato lekce ... lorem ...
 
+## Materiály
+
+TODO ... quiskit dokumentace, pro pochopení je nutné umět matematické a fyzikální základy, které jsou v této lekci.
+
 ## 1. Informatické základy
 
 ### 1.1 Bit
@@ -26,7 +30,20 @@ způsobem, kterým uznám za vhodný. Mohu na obraz pokládat obrazové filtry (
 
 ### 1.2 Qubit  
 
+### 1.3 Kvantový hardware
 
+#### Superconducting qubits (Google, IBM, Rigetti)
+Čipy, které jsou snadno konstruovatelné, jelikož jsou quibity reprezentované elektrickým proudem, avšak je těžké udržet kvantové stavy (šum z okolí ho naruší). 
+Z toho důvodu jsou čipy extrémně chlazené, aby se kvantové chování projevilo. Pracují aktuálně s 60 až 100 quibity.
+
+#### Photonic quantum computer (Xanadu, PsiQuantum)
+Používají fotony pro vyjádření quibitu a ty jsou udržitelné i při pokojové teplotě, avšak jsou velké při velkém počtu quibitů. Umožňují aktuálně až tisíce quibitů.
+
+#### Iontové pasti (Honeywell, IonQ)
+Qubity jsou realizovány ionty (atom s chybějícím elektronem). Pomalejší, ale stabilnější technologie.
+
+#### DWave (DWave)
+Hodně quibitů (i 5000) a prodává se již pro komerční účely (hotový počítač), avšak konstruuje se pro nějaký algoritmus (nelze přeprogramovat).
 
 ## 2. Matematické základy
 
@@ -93,10 +110,15 @@ Lze díky nim provádět odmocninu ze záporných čísel (pokud jsou čísly ko
 #### Aritmetika komplexních čísel
 
 (a + bi) + (c + di) = ( (a+c) + (b+d)i ), př.: (1 + 2i) + (2 + 3i) = (3 + 5i) 
+
 (a + bi) - (c + di) = ( (a-c) + (b-d)i ), př.: (1 + 2i) - (2 + 3i) = (-1, -i)
+
 c * (a + bi) = (c*a + c*bi), př.: 2*(1 + 2i) = (2 + 4i)
-(a + bi) / c = (a/c + bi/c), př.: (1 + 2i)/2 = (0.5 + i)
+
+(a + bi) / c = (a/c + (b/c)i), př.: (1 + 2i)/2 = (0.5 + i)
+
 i * (a + bi) = (ai + bi*i), př.: i * (3 + 2i) = (3i + 2i*i) = (-2 + 3i)
+
 (a + bi) * (c + di) = (a*c + a*di + bi*c a bi*di), př.: (1 + 2i) * (2 + 3i) = (2 + 3i + 4i + 6i^2) = (2 + 7i -6) = (-4 + 7i)
 
 #### Komplexní doplněk (complex conjugate)
@@ -108,12 +130,61 @@ i * (a + bi) = (ai + bi*i), př.: i * (3 + 2i) = (3i + 2i*i) = (-2 + 3i)
 |a + bi|^2 = a^2 + b^2
 
 platí vzorec, že komplexní číslo * komplexní doplněk k číslu = velikost komplexního čísla
+
 (a + bi) * (a - bi) = a^2 - a*bi + a*bi - (bi)^2 = a^2 - (b^2)*(i^2)  = a^2 + b^2
+
+#### Dělení komplexního čísla komplexním číslem
+
+Využívá se 3 aritmetických vlastnosti komplexních čísel:
+
+1) dělení komplexního čísla reálným číslem je jednoduchá operace se vzorcem: (a + bi)/c = (a/c + (b/c)i)
+2) velikost komplexního čísla je reálné číslo
+3) velikost lze spočítat pomocí vynásobení komplexního čísla komplexním doplňkem.
+
+(a + bi)/(c + di) = (a + bi)/(c + di) * (c - di)/(c - di) = (a + bi)*(c - di)/(c^2 + d^2) = (ac - a*di + c*bi + b*d)/(c^2 a d^2)
+
+př.: (1 + 2i) / (2 + 3i) = (1 + 2i)/(2 + 3i) * (2 - 3i)/(2 - 3i) = (1*2 - 3i + 4i -6i^2)/(4 + 9) = (8 + i)/13 = (8/13 + i/13)
 
 
 ### 2.4 Matice
 
+#### Maticová aritmetika
 
+sčítání matic (u odečítání bude místo + znaménko -), čísla mohou být komplexní a platí pro ně aritmetika z předchozí části lekce.
+
+|a b c|   |j k l|   |a+j b+k c+l|
+|d e f| + |m n o| = |d+m e+n f+o|
+|g h i|   |p q r|   |g+p h+q i+r|
+
+     |(1+2i)   (3)|   |(3+2i) (4+4i)|   |(4 + 4i) (8 + 4i)|
+př.: |(4)   (2+3i)| + |(-2)   (5)   | = |(2)      (7 + 3i)| 
+
+škálování matice, j může být reálné nebo komplexní číslo
+
+    |a b c|   |j*a j*b j*c|
+j * |d e f| = |j*d j*e j*f|
+    |g h i|   |j*g j*h j*i|
+
+                |1 2|   |(1+2i)  (2+4i) |
+př.: (1 + 2i) * |3 4| = |(3+6i)  (4+8i) |
+                |5 6|   |(5+10i) (6+12i)|
+
+násobení matic, čísla opět mohou být komplexní a platí pro ně aritmetika násobení komplexních čísel
+
+|a b c|   |j k l|   | (a*j + b*m + c*p) (a*k + b*n + c*q) (a*l + b*o + c*r)|
+|d e f| * |m n o| = | (d*j + e*m + f*p) (d*k + e*n + f*q) (d*l + e*o + f*r)|
+|g h i|   |p q r|   | (g*j + h*m + i*p) (g*k + h*n + i*q) (g*l + h*o + i*r)|
+
+výsledná matice bude mít tolik řádků, kolik první matice, a tolik sloupců, kolik druhá matice. Z toho vyplývá, že násobení matic neni komutativní A*B != B*A.
+
+####Tenzorový součin
+
+            |a*c|
+            |a*d|
+|a|   |c|   |a*e|
+|b| x |d| = |b*c|
+      |e|   |b*d|
+            |b*e|
 
 ### 2.5 Maticové operace
 
@@ -134,6 +205,21 @@ platí vzorec, že komplexní číslo * komplexní doplněk k číslu = velikost
 
 
 ### 4.1. Bernstein Vazirai Algorithm
+
+Algoritmus, který ukazuje, že kvantové počítače umí být při řešení některých problémů efektivnější, než běžné počítače. Řekněme, že mámě nějaké binární číslo, např.:
+1011011. Počítač má toto číslo uhodnout a může si pomoct nějakou logickou operací nad jednotlivými bity. Pokud použijeme operaci AND nad jednotlivými bity s druhou
+hodnotou vždy 1, pak nám operace AND detekuje přítomnost nebo nepřítomnost jedničky.
+
+??????? = 1011011
+
+0000001      0000010    0000100
+AND          AND        AND
+???????   -> ??????? -> ???????  atd.
+=            =          =
+??????1      ?????11    ????011 
+
+Pro sedmibitové binární číslo stačí počítači provést 7 AND operací, aby neznámé číslo odhalil. Berstein Vazirai algoritmus ukazuje, že kvantovému počítači stačí 1
+operace pro odkrytí N-bitového čísla.
 
 
 ### 4.2. Deutsch Algorithm 
