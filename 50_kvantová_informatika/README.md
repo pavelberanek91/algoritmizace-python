@@ -49,24 +49,24 @@ Hodně quibitů (i 5000) a prodává se již pro komerční účely (hotový po�
 
 ### 2.1 Pravděpodobnost
 
-P(A) = pravděpodobnost (šance), že nastane jev A (např.: dnes bude pršet). Uvádí se od 0 do 1, kde 0 je 0 % a 1 je 100 %.
+`P(A)` = pravděpodobnost (šance), že nastane jev A (např.: dnes bude pršet). Uvádí se od 0 do 1, kde 0 je 0 % a 1 je 100 %.
 
-P(A and B) = pravděpodobnost, že nastane jev A a B zároveň (např:. dnes bude pršet a také si dnes zlomím nohu).
+`P(A and B)` = pravděpodobnost, že nastane jev A a B zároveň (např:. dnes bude pršet a také si dnes zlomím nohu).
 
-P( (A and B) or C) = pravděpodobnost, že nastane jev A a B zároveň nebo nastane jev C, nebo nastane A and B a C zároveň.
+`P( (A and B) or C)` = pravděpodobnost, že nastane jev A a B zároveň nebo nastane jev C, nebo nastane A and B a C zároveň.
 
-P(A and B) = P(A) * P(B), pak A a B jsou nezávislé jevy (vůbec spolu nesouvisí). Pokud bude dnes pršet, tak je větší šance, že si zlomím nohu. Tyto dva jevy spolu
+`P(A and B) = P(A) * P(B)`, pak A a B jsou nezávislé jevy (vůbec spolu nesouvisí). Pokud bude dnes pršet, tak je větší šance, že si zlomím nohu. Tyto dva jevy spolu
 souvisí. Avšak pravděpodobnost, že sousedka bude snídat ovesné vločky a pravděpodobnost, že dnes naleznu draka na střeše spolu téměř nesouvisí (leda by ho ty ovesné
 vločky přilákaly). Takové jevy budou tedy nezávislé a celkové pravděpodobnost, že sousedka bude jíst vločky a drak mi přistane na střeše je součin pravděpodobností
 obou jevů nezávisle na sobě.
  
-P(A and B) = 0, pak A a B jsou vzájemně výlučné jevy. Takové jevy se negují. Šance že bude dnes pršet a zároveň ve stejný čas nebude pršet je nulová, jelikož tato
+`P(A and B) = 0`, pak A a B jsou vzájemně výlučné jevy. Takové jevy se negují. Šance že bude dnes pršet a zároveň ve stejný čas nebude pršet je nulová, jelikož tato
 kombinace jevů nemůže nastat. Nebo například šance, že zítra vyjde nový Fallout, a šance, že bude bez bugů je také vzájemně výlučné :) ...
 
-P(A or B) = P(A) + P(B) u vzájemně výlučných jevů. Nemohou nastat oba zároveň, ale může nastat alespoň jeden z nich. Nemůže nastat, že bude a nebude pršet zároveň, 
+`P(A or B) = P(A) + P(B)` u vzájemně výlučných jevů. Nemohou nastat oba zároveň, ale může nastat alespoň jeden z nich. Nemůže nastat, že bude a nebude pršet zároveň, 
 ale může nastat, že bude buď pršet nebo nebude pršet. Pravděpodobnosti se sčítají (výsledek může být klidně 100 % jako ve zmíněném příkladě).
 
-P(A or B) = P(A) + P(B) - P(A and B) u nezávislých jevů. Nezávislé jevy se dějí nezávislé na druhém, proto je nutné odečíst od výsledku pravděpodobnost jejich
+`P(A or B) = P(A) + P(B) - P(A and B)` u nezávislých jevů. Nezávislé jevy se dějí nezávislé na druhém, proto je nutné odečíst od výsledku pravděpodobnost jejich
 vzájemného nastání. Pokud jsem se nedohodl s kamarádem, že půjdeme dnes do hospody, pak je šance, že se tam oba setkáme na sobě zcela nezávislá. Tyto jevy se
 nevylučují, může nastat jeden z nich nebo oba zároveň. Pro výpočet toho, zda bude alespoň jeden z nás v hospodě, je nutné ze součtu pravděpodobností odečíst
 šanci jevu, že dorazíme oba zároveň.
