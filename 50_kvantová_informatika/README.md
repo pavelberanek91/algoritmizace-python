@@ -253,7 +253,7 @@ násobení matic, čísla opět mohou být komplexní a platí pro ně aritmetik
 ```
 výsledná matice bude mít tolik řádků, kolik první matice, a tolik sloupců, kolik druhá matice. Z toho vyplývá, že násobení matic neni komutativní A*B != B*A.
 
-####Tenzorový součin
+#### Tenzorový součin
 
 ```
             |a*c|
@@ -288,6 +288,7 @@ Algoritmus, který ukazuje, že kvantové počítače umí být při řešení n
 1011011. Počítač má toto číslo uhodnout a může si pomoct nějakou logickou operací nad jednotlivými bity. Pokud použijeme operaci AND nad jednotlivými bity s druhou
 hodnotou vždy 1, pak nám operace AND detekuje přítomnost nebo nepřítomnost jedničky.
 
+```
 ??????? = 1011011
 
 0000001      0000010    0000100
@@ -295,6 +296,7 @@ AND          AND        AND
 ???????   -> ??????? -> ???????  atd.
 =            =          =
 ??????1      ?????11    ????011 
+```
 
 Pro sedmibitové binární číslo stačí počítači provést 7 AND operací, aby neznámé číslo odhalil. Berstein Vazirai algoritmus ukazuje, že kvantovému počítači stačí 1
 operace pro odkrytí N-bitového čísla.
