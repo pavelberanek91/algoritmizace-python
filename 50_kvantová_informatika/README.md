@@ -108,18 +108,41 @@ i^0 = 1, i^1 = i, i^2 = -1, i^3 = -i, i^4 = i^0.
 Lze díky nim provádět odmocninu ze záporných čísel (pokud jsou čísly komplexními), např.: sqrt(-4) = sqrt(i^2 * 4) = 2i, kde jsme odmocňovali číslo (0 + 4i^2). 
 
 #### Aritmetika komplexních čísel
+
+Součet dvou imaginárních čísel
 ```
-(a + bi) + (c + di) = ( (a+c) + (b+d)i ), př.: (1 + 2i) + (2 + 3i) = (3 + 5i) 
+(a + bi) + (c + di) = ( (a+c) + (b+d)i )
+př.: (1 + 2i) + (2 + 3i) = (3 + 5i) 
+```
 
-(a + bi) - (c + di) = ( (a-c) + (b-d)i ), př.: (1 + 2i) - (2 + 3i) = (-1, -i)
+Rozdíl dvou imaginárních čísel
+```
+(a + bi) - (c + di) = ( (a-c) + (b-d)i )
+př.: (1 + 2i) - (2 + 3i) = (-1, -i)
+```
 
-c * (a + bi) = (c*a + c*bi), př.: 2*(1 + 2i) = (2 + 4i)
+Součin reálného čísla s imaginárním číslem
+```
+c * (a + bi) = (c*a + c*bi)
+př.: 2*(1 + 2i) = (2 + 4i)
+```
 
-(a + bi) / c = (a/c + (b/c)i), př.: (1 + 2i)/2 = (0.5 + i)
+Podíl imaginárního čísla reálným číslem
+```
+(a + bi) / c = (a/c + (b/c)i)
+př.: (1 + 2i)/2 = (0.5 + i)
+```
 
-i * (a + bi) = (ai + bi*i), př.: i * (3 + 2i) = (3i + 2i*i) = (-2 + 3i)
+Součin imaginární jednotky a komplexního čísla
+```
+i * (a + bi) = (ai + bi*i)
+př.: i * (3 + 2i) = (3i + 2i*i) = (-2 + 3i)
+```
 
-(a + bi) * (c + di) = (a*c + a*di + bi*c a bi*di), př.: (1 + 2i) * (2 + 3i) = (2 + 3i + 4i + 6i^2) = (2 + 7i -6) = (-4 + 7i)
+Součin dvou komplexních čísel
+```
+(a + bi) * (c + di) = (a*c + a*di + bi*c a bi*di)
+př.: (1 + 2i) * (2 + 3i) = (2 + 3i + 4i + 6i^2) = (2 + 7i -6) = (-4 + 7i)
 ```
 #### Komplexní doplněk (complex conjugate)
 
