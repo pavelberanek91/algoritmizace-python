@@ -30,7 +30,7 @@ Druhý semestr se zaměřuje na objektově orientované programování pro imple
 |15|xx.xx.xx|Abstraktní datové typy (ADT), implementace sekvenčních datových struktur (fronta, zásobník, setříděný seznam)|xxx|
 |16|xx.xx.xx|Implementace vlastních algoritmů nad sekvenčními kolekcemi - vyhledávací algoritmy|xxx|
 |17|xx.xx.xx|Implementace vlastních algoritmů nad sekvenčními kolekcemi - třídící algoritmy|xxx|
-|18|xx.xx.xx|Implementace vlastn9ch algoritmů nad sekvenčními kolekcemi - třídící algoritmy 2|xxx|
+|18|xx.xx.xx|Implementace vlastních algoritmů nad sekvenčními kolekcemi - třídící algoritmy 2|xxx|
 |19|xx.xx.xx|Spojové struktury a jejich objektová implementace (spojové seznamy, stromy aj.)|xxx|
 |20|xx.xx.xx|Implementace vlastních algoritmů nad spojovými strukturami|xxx|
 |21|xx.xx.xx|Implementace vlastních algoritmů nad spojovými strukturami 2|xxx|
